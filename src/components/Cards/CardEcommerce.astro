@@ -23,7 +23,7 @@ import StarWhiteIcon from "../icons/StarWhiteIcon.astro";
         let color = ""
         let buttonColor = ""
         numberChange = i + 1
-     imgShoe.setAttribute('src',`shoes-${numberChange}.webp`) 
+     imgShoe.setAttribute('src',`../../shoes-${numberChange}.webp`) 
      
     if (numberChange === 1) {
         color = "dark:via-pink-300"
@@ -64,15 +64,15 @@ import StarWhiteIcon from "../icons/StarWhiteIcon.astro";
         <div class="dark:bg-neutral-900 dark:bg-opacity-70 bg-gray-200 bg-opacity-50 rounded-xl  dark:text-white text-gray-800 p-6 shadow-lg dark:border-neutral-600 border">
             <div class="flex justify-between items-center  ">
                 <img 
-                class="./size-11"
-                src="./Adidas-Logo.wine.svg" />
+                class="size-11"
+                src="../../Adidas-Logo.wine.svg" />
                 <button>
                     <EcommerceIcon class="size-7 hover:size-8 transition duration-300" />
                 </button>
             </div>
             <img 
             class="img-shoe p-12 max-w-[300px] drop-shadow-lg"
-            src={`shoes-1.webp`}>
+            src={`../../shoes-1.webp`}>
             <div class="flex gap-2 flex-col">
                 <h3 class="font-semibold text-xl">ADIDAS GAZE ZX</h3>
                 <p class="max-w-[300px] text-balance">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat necessitatibus.</p>
