@@ -1,0 +1,105 @@
+---
+import LayoutCard from "../LayoutCard.astro";
+import EcommerceIcon from "../icons/EcommerceIcon.astro";
+import StarBlackIcon from "../icons/StarBlackIcon.astro";
+import StarWhiteIcon from "../icons/StarWhiteIcon.astro";
+
+---
+<script>
+   
+    const buttonColor = document.querySelectorAll('.button-color')
+    const imgShoe = document.querySelector('.img-shoe')
+    const container = document.querySelector('.container-shoe')
+    const buttonSubmit = document.querySelector('.button-submit')
+
+
+    buttonColor.forEach( (button, i) => (
+    button.addEventListener('click' ,()=> handleChangeShoes(i))
+
+    ))
+
+    function handleChangeShoes(i : number) {
+        let numberChange = 1
+        let color = ""
+        let buttonColor = ""
+        numberChange = i + 1
+     imgShoe.setAttribute('src',`shoes-${numberChange}.webp`) 
+     
+    if (numberChange === 1) {
+        color = "dark:via-pink-300"
+        buttonColor = 'dark:bg-pink-400'
+        container.classList.remove('dark:via-blue-500','dark:via-yellow-400',"via-yellow-400",'via-blue-500')
+        container.classList.add(color,'via-pink-300')
+
+        buttonSubmit.classList.remove('dark:bg-blue-500','dark:bg-yellow-400',"bg-yellow-400",'bg-blue-500')
+        buttonSubmit.classList.add(buttonColor,"bg-pink-400")
+
+    }
+    if (numberChange === 2) {
+        color = "dark:via-blue-500"
+        buttonColor = 'dark:bg-blue-500'
+        container.classList.remove('dark:via-pink-300','dark:via-yellow-400',"via-yellow-400",'via-pink-300')
+        container.classList.add(color,'via-blue-500')
+
+        buttonSubmit.classList.remove('dark:bg-pink-400','dark:bg-yellow-400',"bg-yellow-400",'bg-pink-400')
+        buttonSubmit.classList.add(buttonColor,'bg-blue-500')
+    }
+    if (numberChange === 3) {
+        color = "dark:via-yellow-400"
+        buttonColor = 'dark:bg-yellow-400'
+        container.classList.remove('dark:via-pink-300','dark:via-blue-500',"via-blue-500",'via-pink-300')
+        container.classList.add(color,'via-yellow-400')
+
+        buttonSubmit.classList.remove('dark:bg-pink-400','dark:bg-blue-500',"bg-blue-500",'bg-pink-400')
+        buttonSubmit.classList.add(buttonColor,'bg-yellow-400')
+    }
+
+
+    }
+
+</script>
+
+<LayoutCard>
+    <div class="container-shoe bg-gradient-to-t dark:from-black from-white dark:via-pink-300 via-pink-300 dark:to-black to-white rounded-xl">
+        <div class="dark:bg-neutral-900 dark:bg-opacity-70 bg-gray-200 bg-opacity-50 rounded-xl  dark:text-white text-gray-800 p-6 shadow-lg dark:border-neutral-600 border">
+            <div class="flex justify-between items-center  ">
+                <img 
+                class="size-11"
+                src="Adidas-Logo.wine.svg" />
+                <button>
+                    <EcommerceIcon class="size-7 hover:size-8 transition duration-300" />
+                </button>
+            </div>
+            <img 
+            class="img-shoe p-12 max-w-[300px] drop-shadow-lg"
+            src={`shoes-1.webp`}>
+            <div class="flex gap-2 flex-col">
+                <h3 class="font-semibold text-xl">ADIDAS GAZE ZX</h3>
+                <p class="max-w-[300px] text-balance">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat necessitatibus.</p>
+                <div class="flex gap-1 pb-5">
+                    <StarBlackIcon class="size-4 text-gray-950"/>
+                    <StarBlackIcon class="size-4 text-gray-950"/>
+                    <StarBlackIcon class="size-4 text-gray-950"/>
+                    <StarBlackIcon class="size-4 text-gray-950"/>
+                    <StarWhiteIcon class="size-4"/>
+                </div>
+            </div>
+            <div class="flex justify-between items-center">
+                <div class="flex gap-2 items-center">
+                    <p class="font-semibold">Colour:</p>
+                    <div class="flex gap-3">
+                        <button class="button-color bg-pink-200 size-4 rounded-full border border-pink-300"></button>
+                        <button class="button-color bg-blue-400 size-4 rounded-full"></button>
+                        <button class="button-color bg-yellow-400 size-4 rounded-full"></button>
+                    </div>
+                </div>
+                <div class="flex flex-col  items-end">
+                    <p class="font-semibold text-xl">$09.00</p>
+                    <p class="font-semibold text-sm  text-gray-500">Lorem Impsum</p>
+                </div>
+            </div>
+            <button class="button-submit dark:bg-pink-400 bg-pink-400 bg-opacity-80 hover:bg-opacity-100 rounded-full py-3 w-full font-bold mt-6 text-white dark:bg-opacity-40 dark:hover:bg-opacity-50">Button</button>
+        </div>  
+    </div>
+</LayoutCard>
+

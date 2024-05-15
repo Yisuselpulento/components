@@ -1,0 +1,22 @@
+---
+import LayoutCard from "../LayoutCard.astro";
+import MusicIcon from "../icons/MusicIcon.astro"
+---
+
+<LayoutCard>
+    <div class="relative max-w-[300px] h-[300px] rounded-2xl flex text-white">
+        <img 
+        class="rounded-2xl object-cover"
+        src="wallpaper.webp" />
+        <div class="w-[288px] h-[70px]  rounded-3xl bg-white absolute bottom-3 left-2 backdrop-blur-lg bg-opacity-0 border border-gray-400  flex items-center gap-4 justify-center">
+            <div class="flex gap-2 items-center">
+                <MusicIcon class="size-6" />
+                <p class="text-md  ">Lorem Ipsum</p>
+            </div>
+            <button class="bg-neutral-700 py-3 px-6 rounded-2xl backdrop-blur-sm bg-opacity-20  hover:bg-opacity-30">Button</button>
+        </div>
+    </div>
+</LayoutCard>
+
+
+

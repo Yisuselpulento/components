@@ -1,0 +1,17 @@
+---
+import CardBlur from "../components/Cards/CardBlur.astro";
+import CardEcommerce from "../components/Cards/CardEcommerce.astro";
+import CardLight from "../components/Cards/CardLight.astro";
+import CardModern from "../components/Cards/CardModern.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Cards">
+    <main class="flex items-center gap-10 flex-col md:w-[1200px] ">
+        <h1 class="text-5xl font-bold pt-12">Cards</h1>
+        <CardEcommerce/>
+        <CardBlur/>
+        <CardModern />
+        <CardLight />
+    </main>
+</Layout>
