@@ -7,16 +7,15 @@ const className = "dark:hover:text-indigo-500 hover:text-yellow-600 md:font-norm
 
 ---
 
-<header  class="fixed top-0 z-10  dark:bg-opacity-45 bg-opacity-45 backdrop-blur-sm rounded flex flex-col items-end md:items-center w-full ">
+<header  class="fixed top-0 z-10  dark:bg-opacity-45 bg-opacity-45 backdrop-blur-sm rounded flex flex-col items-end md:items-center w-full">
     <button
     class="menu-button md:hidden flex items-end dark:bg-neutral-900 bg-gray-300 dark:bg-opacity-80 bg-opacity-80  shadow rounded-full  p-2 m-3 dark:hover:bg-neutral-800 hover:bg-gray-200">
-     <NavIcon class="toggle-icon size-7 " /> 
-     <Close class="toggle-icon-2 hidden size-7 " />
+ <NavIcon class="toggle-icon size-7 " /> 
+     <Close class="toggle-icon-2 hidden size-7 " /> 
     </button> 
     <nav class="menu-open hidden md:flex md:justify-between md:flex-row flex-col  px-3  pt-3 pb-1 md:w-[1200px] h-full gap-6 md:gap-0 items-end  dark:bg-neutral-600  bg-gray-400  w-full rounded dark:bg-opacity-45 bg-opacity-45 md:dark:bg-opacity-0 md:bg-opacity-0 backdrop-blur-sm ">
             <div class="flex md:gap-6 gap-10 md:flex-row  p-2 md:justify-center md:items-center  flex-col items-end pb-4 md:pb-0   md:w-full">
-                <a class={className} href="/" rel="noopener noreferrer" >Inicio</a>
-                <a class={className}  href="cards" rel="noopener noreferrer" >Cards</a>
+                <a class={className}  href="/" rel="noopener noreferrer" >Cards</a>
                 <a class={className}  href="#about" rel="noopener noreferrer" >Fonts</a>
                 <a class={className}  href="#contact" rel="noopener noreferrer">Navs</a>
                 <ThemeToggle />

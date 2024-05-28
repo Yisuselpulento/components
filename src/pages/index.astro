@@ -1,11 +1,51 @@
 ---
-
-import Layout from '../layouts/Layout.astro';
-
+import CardBlur from "../components/Cards/CardBlur.astro";
+import CardEcommerce from "../components/Cards/CardEcommerce.astro";
+import CardLight from "../components/Cards/CardLight.astro";
+import CardModern from "../components/Cards/CardModern.astro";
+import CardShine from "../components/Cards/CardShine.astro";
+import CardWallpaper from "../components/Cards/CardWallpaper.astro";
+import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout title="Components">
-	<h1>COMPONENTES</h1>
-	
+<Layout title="Cards">
+    <main class="flex flex-col w-full justify-center items-center gap-6">     
+    <h1 class="text-5xl font-bold pt-12">Cards</h1>
+        <CardBlur/>
+        <CardModern />
+        <CardLight />
+        <CardWallpaper/>
+        <div >      
+            <CardShine/>
+           <!--  <pre class="flex gap-2 p-10 bg-slate-800 max-w-[1000px] overflow-y-auto items-center justify-center">
+                <div >
+                    1<br>2<br>3<br>4<br>5<br>6<br>7<br>2<br>3<br>4<br>5<br>6<br><br>2<br>3<br>4<br>5<br>6<br><br>2<br>3<br>4<br>5<br>6<br>
+                </div>
+                <code>
+                    &lt;<span class="tag">img</span> <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<span class="attr-name">class</span>="<span class="attr-value">rounded-lg size-[300px] absolute object-cover</span>"<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<span class="attr-name">src</span>="<span class="attr-value">./wallpaper.webp</span>" /&gt;<br>  
+                    &lt;<span class="tag">div</span> <span class="attr-name">class</span>="<span class="attr-value flex ">relative cursor-pointer overflow-hidden size-[300px] rounded-lg before:bg-gradient-to-r before:from-white before:to-gray-700 before:w-[360px] before:h-[370px] before:absolute before:rotate-12 before:opacity-10 before:top-0 before:right-0 transition before:duration-200 before:translate-x-[400px] hover:before:-translate-y-10 hover:before:translate-x-[30px]</span>"&gt;&lt;/<span class="tag">div</span>&gt;
+                </code>
+            </pre> -->
+        </div>
+        <CardEcommerce/>
+    </main>
 </Layout>
 
+<style>
+    pre {
+        white-space: pre-wrap;
+
+    }
+
+    .tag {
+        color: #f03939;
+    }
+    .attr-name {
+        color: #fae84b;
+    }
+    .attr-value {
+        color: #8ce25a;
+    }
+</style>
